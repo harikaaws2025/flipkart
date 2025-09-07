@@ -54,7 +54,7 @@ pipeline {
             steps {
                 sh """
                     docker service rm flipkart-service || true
-                    docker service create --name flipkart-service -p 8080:8080 ${DOCKER_IMAGE}:${DOCKER_TAG}
+                    docker service create --name flipkart-service -p 8082:8080 ${DOCKER_IMAGE}:${DOCKER_TAG}
                     docker service ls
                 """
             }
